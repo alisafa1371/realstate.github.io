@@ -1,0 +1,60 @@
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: $color-grey-light-1;
+  row-gap: 3.6rem;
+
+  img {
+    width: 100%;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
+  &__lable {
+    font-family: $font-display;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    padding: 1.25rem;
+    font-weight: 400;
+    background-color: $color-secondary;
+    color: #fff;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    align-self: end;
+    justify-self: center;
+    width: 80%;
+    transform: translateY(50%);
+  }
+  &__heart {
+    grid-column: 2/-1;
+    grid-row: 1/2;
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: red;
+    justify-self: end;
+    margin: 1rem;
+  }
+  &__location,
+  &__rooms {
+    margin-top: 2.4rem;
+  }
+  &__location,
+  &__rooms,
+  &__area,
+  &__price {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin-left: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    svg {
+      width: 2rem;
+      height: 2rem;
+      fill: $color-primary;
+    }
+  }
+  &__btn {
+    grid-column: 1/-1;
+  }
+}

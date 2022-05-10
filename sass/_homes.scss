@@ -1,0 +1,17 @@
+.homes {
+  grid-column: center-start/center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 7rem;
+  margin: 15rem 0;
+  /////////////// Queries ////////////////////////
+  // 800px
+  @media only screen and (max-width: $tab-land-screens) {
+    margin: 10rem 0;
+  }
+  // 800px
+  @media only screen and (max-width: $small-mobile-screens) {
+    margin: 7rem 0;
+  }
+  //////////////////////////////////////////////////
+}

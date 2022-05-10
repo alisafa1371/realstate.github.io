@@ -1,0 +1,51 @@
+.realtors {
+  background-color: $color-secondary;
+  grid-column: col-start 7 / full-end;
+  padding: 3rem;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  row-gap: 2rem;
+  /////////////// Queries ////////////////////////
+  // 800x
+  @media only screen and (max-width: $tab-land-screens) {
+    grid-column: full-start/full-end;
+  }
+  //////////////////////////////////////////////
+  &__list {
+    font-family: $font-display;
+    color: $color-grey-light-1;
+    display: grid;
+    grid-template-columns: min-content max-content;
+    align-items: center;
+    column-gap: 2rem;
+    row-gap: 5vh;
+    /////////////// Queries ////////////////////////
+    // 800x
+    @media only screen and (max-width: $tab-land-screens) {
+      grid-template-columns: repeat(6, minmax(min-content, max-content));
+      grid-template-rows: 1fr;
+    }
+    // 600x
+    @media only screen and (max-width: $mobile-screens) {
+      grid-template-columns: min-content max-content;
+    }
+    //////////////////////////////////////////////
+  }
+  &__img {
+    width: 7rem;
+    border-radius: 50%;
+  }
+  &__name {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    font-weight: 400;
+  }
+  &__house-sold {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: $color-grey-light-2;
+    margin-top: -3px;
+  }
+}
